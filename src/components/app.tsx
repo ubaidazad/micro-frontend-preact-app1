@@ -3,23 +3,24 @@ import { Route, Router, RouterOnChangeArgs } from "preact-router";
 
 import Home from "../routes/home";
 import Profile from "../routes/profile";
-import NotFoundPage from "../routes/notfound";
-import Header from "./header";
 
-const App: FunctionalComponent = () => {
+export interface AppProps {
+    history: any;
+}
+
+
+
+const App: FunctionalComponent<AppProps> = (props) => {
     let currentUrl: string;
     const handleRoute = (e: RouterOnChangeArgs) => {
         currentUrl = e.url;
     };
 
     return (
-        <div id="app">
-            <Header />
+        <div id="bpay-app">
             <Router onChange={handleRoute}>
-                <Route path="/" component={Home} />
-                <Route path="/profile/" component={Profile} user="me" />
-                <Route path="/profile/:user" component={Profile} />
-                <NotFoundPage default />
+                <Route path="/bpay" component={Home} />
+                <Route path="/bpay/profile" component={Profile} />
             </Router>
         </div>
     );

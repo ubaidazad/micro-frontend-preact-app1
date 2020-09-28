@@ -20,6 +20,8 @@ export default {
             }
         });
 
+        config.output.publicPath = 'http://localhost:8090/';
+
         // Use any `index` file, not just index.js
         config.resolve.alias["preact-cli-entrypoint"] = resolve(
             process.cwd(),
