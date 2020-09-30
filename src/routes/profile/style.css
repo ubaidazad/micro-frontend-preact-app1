@@ -1,5 +1,15 @@
 .profile {
-	padding: 56px 20px;
+	padding: 10px 20px;
 	min-height: 100%;
 	width: 100%;
+}
+
+.profile button {
+	background: rgb(0, 185, 245);
+    border: none;
+    color: white;
+    border: 1px solid white;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: bold;
 }

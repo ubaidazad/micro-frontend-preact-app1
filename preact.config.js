@@ -20,6 +20,9 @@ export default {
             }
         });
 
+        //www.paytm.com/bpay
+        //www.paytm.com/ump
+
         config.output.publicPath = 'http://localhost:8090/';
 
         // Use any `index` file, not just index.js
